@@ -1,0 +1,11 @@
+<Limit GET POST>
+        require valid-user
+</Limit>
+AuthType Basic
+AuthName "Enter HTTP auth credentials"
+AuthUserFile /var/www/devuser/data/www/tst1.ngo2.ru/site.passwd
+<FilesMatch "(admin-ajax.php)|(load-scripts.php)">
+  Allow from all
+  Satisfy any
+</FilesMatch>
+
